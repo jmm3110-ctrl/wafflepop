@@ -1,0 +1,227 @@
+:root{
+  --rosa-claro:#FBC5DC;
+  --rosa-fuerte:#E04AA0;
+  --choco:#6B3A1E;
+  --fondo:#FFF0F7;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg,var(--fondo),#FFEAF4);
+  color:var(--choco);
+}
+
+/* HEADER */
+header.header-wp{
+  text-align:center;
+  padding:28px 16px;
+  background: linear-gradient(90deg,var(--rosa-claro), #FFD3EA);
+  border-bottom:4px solid var(--rosa-fuerte);
+}
+.logo-header{
+  width:140px;
+  display:block;
+  margin:0 auto 8px;
+}
+.titulo-header{
+  color:var(--choco);
+  font-size:2.4rem;
+  margin:6px 0 4px;
+}
+.subtitulo-header{
+  color:#5b2237;
+  margin:0 0 12px;
+}
+.btn-orden{
+  display:inline-block;
+  background:var(--rosa-fuerte);
+  color:#fff;
+  padding:10px 18px;
+  border-radius:24px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 6px 18px rgba(224,74,160,0.18);
+}
+
+/* NAV */
+nav.menu{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  padding:10px 12px;
+  background:#fff0f7;
+  border-bottom:2px solid rgba(224,74,160,0.12);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+nav.menu a{
+  color:var(--rosa-fuerte);
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* VIDEO PORTADA */
+.video-portada{
+  position:relative;
+  height:260px;
+  overflow:hidden;
+  border-bottom:3px solid var(--rosa-fuerte);
+}
+.video-fondo{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(.65);
+}
+.texto-portada{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  color:white;
+  font-size:1.6rem;
+  font-weight:800;
+  text-shadow:0 6px 18px rgba(0,0,0,0.45);
+  background:rgba(0,0,0,0.2);
+  padding:10px 18px;
+  border-radius:10px;
+}
+
+/* CONTENIDOS */
+.wrap{
+  width:94%;
+  max-width:1100px;
+  margin:28px auto;
+}
+
+.contenedor-principal{
+  background:linear-gradient(180deg,var(--rosa-claro),#FFE9F2);
+  border:3px solid var(--rosa-fuerte);
+  border-radius:18px;
+  padding:22px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(107,58,30,0.06);
+}
+.contenedor-principal h2{
+  color:var(--rosa-fuerte);
+}
+
+.galeria{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+.item{
+  background:#fff;
+  border-radius:14px;
+  padding:10px;
+  border:3px solid #FFD4E8;
+  text-align:center;
+}
+.item img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:10px;
+}
+.item p{
+  font-weight:700;
+  color:#6b3a1e;
+}
+
+/* SECCIONES INFO */
+section.info{
+  margin:28px 0;
+  padding:20px;
+  background:linear-gradient(90deg,#fff,#FFF6FB);
+  border-radius:12px;
+  border:2px solid rgba(224,74,160,0.06);
+}
+.info h3{
+  color:var(--rosa-fuerte);
+}
+
+/* FOOTER */
+footer.footer-wp{
+  text-align:center;
+  padding:18px;
+  background:var(--rosa-fuerte);
+  color:white;
+  margin-top:28px;
+}
+
+@media (max-width:520px){
+  .titulo-header{ font-size:1.8rem; }
+  .texto-portada{ font-size:1.1rem; }
+  .item img{ height:130px; }
+}
+/* --- GALERÍA DESLIZANTE --- */
+.gallery {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 20px;
+    animation: slider 12s linear infinite; /* ESTA LÍNEA HACE QUE SE MUEVA */
+}
+
+.gallery-track img {
+    width: 200px;
+    border-radius: 12px;
+}
+
+/* ANIMACIÓN */
+@keyframes slider{
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+/* Título bonito */
+.titulo-contacto {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ff44aa;
+    text-shadow: 1px 1px 8px rgba(255, 0, 150, 0.3);
+    margin-bottom: 20px;
+}
+
+/* Estilo general de botones */
+.btn-contacto {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px 0;
+    border-radius: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+/* WhatsApp verde */
+.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+/* Instagram rosado */
+.instagram {
+    background: #ff5ec4;
+    color: white;
+}
+
+/* Efecto hover */
+.btn-contacto:hover {
+    transform: scale(1.07);
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.25);
+    filter: brightness(1.15);
+}
